@@ -131,7 +131,7 @@ const Main = () => {
                 <input type='text' className='input_box'></input>
             </div>
             <div className='padding_4'></div>
-            <div className='generate_container' onClick={() => navigate('/main/result')}>
+            <div className='generate_container' onClick={() => navigate('/result')}>
                 <LuPenTool className='generate_icon' size={40}/>
                 <div className='generate_text'>Generate</div>
             </div>
