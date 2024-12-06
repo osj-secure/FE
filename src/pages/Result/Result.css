@@ -1,0 +1,47 @@
+.top {
+    margin-top: 5.2vh;
+    margin-bottom: 20vh;
+}
+
+.back{
+    margin-left: 4.6vw;
+    width: 18vw;
+    margin-right: 66vw;
+    height: 9vh;
+    cursor: pointer;
+}
+
+.refresh {
+    margin-right: 3.3vw;
+    width: 7.8vw;
+    height: 9vh;
+    border: 0;
+    cursor: pointer;
+}
+
+.middle {
+    margin-bottom: 20vh;
+    margin-right: 13vw;
+    margin-left: 13vw;
+}
+
+.result {
+    height: 300px;
+    width: 300px;
+    margin-right: 2.5vw;
+    margin-left: 2.5vw;
+}   
+
+
+.bottom{
+    margin-left: 81.5vw;
+    margin-right: 3.5vw;
+    margin-bottom: 4.6vh;
+    cursor: pointer;;
+}
+
+.download {
+    height: 7vh;
+    width: 15vw;
+    cursor: pointer;
+}
