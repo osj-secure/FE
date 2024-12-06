@@ -12,13 +12,7 @@ app.use(cors()); // React 포트
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// React 정적 파일 제공
-app.use(express.static(path.join(__dirname, "prompting/build")));
 
-// React Catch-All 라우팅
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "prompting/build/index.html"));
-});
 
 // Endpoint: Prompt 저장
 app.post("/api/save-prompt", (req, res) => {
