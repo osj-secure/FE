@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.spoke-guard {
+  position: relative;
+  clip-path: circle(50%);
+}
+
+.spoke-guard::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px; /* Inner hole size */
+  height: 80px;
+  background-color: white; /* Simulate transparency for inner hole */
+  transform: translate(-50%, -50%);
+  border-radius: 50%; /* Inner circle */
+  z-index: 1;
+  pointer-events: none; /* Prevent interaction with the hole */
+}
+
+/* Spinning Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: rotate(720deg); /* Accelerate */
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: rotate(1080deg); /* Decelerate */
+    animation-timing-function: ease-out;
+  }
+}
