@@ -60,7 +60,7 @@ const Result = () => {
                 {
                     headers: {
                         "Content-Type": "application/json",
-                        Authorization: gptAPI
+                        Authorization: gptAPI           
                     },
                 }
             );
