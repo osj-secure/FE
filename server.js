@@ -33,10 +33,7 @@ app.post("/api/save-prompt", (req, res) => {
   res.json({ prompt });
 });
   
-// React Catch-All 라우팅
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "prompting/build/second_page.html"));
-  });
+
 
 // Start the server
 app.listen(PORT, () => {
