@@ -98,7 +98,7 @@ const Main = () => {
             }
         
             // Step 2: Send the generated prompt to the server
-            const serverResponse = await fetch("http://localhost:8000/api/save-prompt", {
+            const serverResponse = await fetch("https://bottle22.netlify.app/api/save-prompt", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
