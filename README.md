@@ -76,16 +76,3 @@ npm run serve
 ![UI 스크린샷 예시](./images/ui_screenshot.png)
 
 ---
-
-## 기여 방법
-프로젝트에 기여하고 싶으신 분은 **Issues**나 **Pull Request**를 통해 의견 및 제안 사항을 남겨주세요.
-
----
-
-## 라이선스
-본 프로젝트는 MIT 라이선스 하에 배포되며, 자세한 내용은 [LICENSE](./LICENSE)를 참조하세요.
-
----
-
-## 문의
-프로젝트 관련 문의사항은 [Email](mailto:contact@spokeguard.example)로 연락주시기 바랍니다.
