@@ -13,7 +13,7 @@ const Result = () => {
     // main.js에서 navigate로 전달한 state를 받아옴
     const { generatedPromptText } = location.state || {};
 
-    const gptAPI = `Bearer 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`;
+    const gptAPI = `Bearer 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`;
     const [errorMessage, setErrorMessage] = useState("");
     const [generatedImage, setGeneratedImage] = useState("");
     const [state, setState] = useState("initial"); 
