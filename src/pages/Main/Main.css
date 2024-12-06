@@ -37,47 +37,139 @@
 }
 
 .style_container {
-    margin-left: 6.3vw;
+    margin-left: 5.3vw;
     height: 21vh;
     width: 90.2vw;
     display: flex;
     flex-direction: row;
 }
 
-#style_box {
-    background-color: #F8F8F8;
+.style_box {
     height: 21vh;
-    width: 14.68vw;
-    margin-right: 4.2vw;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-}
-#style_box2 {
-    background-color: #F8F8F8;
-    height: 21vh;
-    width: 14.68vw;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
+    width: 7.15vw;
+    margin-right: 1vw;
+    margin-left: 1vw;
     display: flex;
     flex-direction: column;
 }
 
 .style_text {
+    width: 7.15vw;
     color: black;
-    margin-top: 7vh;
-    margin-left: 3vw;
-    font-size: small;
+    font-size: big;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
-.style_image {
-    height: 5.5vh;
-    width: 11.88vw;
-    margin-left: 1.4vw;
-    margin-top: 3.5vh;
-    background-color: #92F2E4;
-    border-radius: 7px;
+.style_text2 {
+    color: black;
+    font-size: small;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#style_image1 {
+    background-image: url('https://images.saatchiart.com/saatchi/1400881/art/7897841/6965545-HSC00001-7.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 18vh;
+    width: 8vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+#style_image2 {
+    background-image: url('https://i0.wp.com/watercolorgirlfriend.com/wp-content/uploads/2023/06/VailCOLandscape.jpg?resize=1080%2C675&ssl=1');
+    background-size: cover;
+    background-position: center;
+    height: 18vh;
+    width: 8vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+#style_image3 {
+    background-image: url('https://afremov.com/media/catalog/product/cache/029c9410eb6b6a309d2f6c6bdfc6e2f2/image_675_1.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 18vh;
+    width: 8vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+#style_image4 {
+    background-image: url('https://d3rf6j5nx5r04a.cloudfront.net/0WLG5-wn5GCqsTbIusnJrHLMIyE=/1120x0/product/f/8/b80226f9be084abb9906d3c55372d69f_opt.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 18vh;
+    width: 8vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+#style_image5 {
+    background-image: url('https://cdn.prod.website-files.com/654e9edbbd76e053a7c33f00/656f8b37da563f4970fcfe98_ink-drawing-appraisal.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 18vh;
+    width: 8vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+#style_image6 {
+    background-image: url('https://www.pencil-topics.co.uk/images/graphite-dog-portrait.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 18vh;
+    width: 8vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+#style_image7 {
+    background-image: url('https://i.redd.it/5d5fy4e5znub1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 18vh;
+    width: 8vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+#style_image8 {
+    background-image: url('https://i.pinimg.com/236x/ba/57/98/ba5798d974ac89f18633926018418b00.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 18vh;
+    width: 8vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+#style_image9 {
+    background-image: url('https://fineartshippers.com/wp-content/uploads/2024/01/Digital-Art-and-Artificial-Intelligence.png');
+    background-size: cover;
+    background-position: center;
+    height: 18vh;
+    width: 8vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+#style_image10 {
+    background-image: url('https://n.viewfinder.vn/api/original/media/anh_sang_trong_quay_phim_2_min_rAhRK69SEV.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 18vh;
+    width: 8vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
 }
 
 .padding_3 {
@@ -107,6 +199,8 @@
     height: 27.7vh;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
+    border: none;
+
 }
 
 .padding_4 {

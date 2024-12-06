@@ -37,31 +37,51 @@ const Main = () => {
             </div>
             <div className='padding_2'></div>
             <div className='style_container'>
-                <div id='style_box'>
-                    <div className='style_text'>style 1</div>
-                    <div className='style_image'></div>
+                <div className='style_box'>
+                    <div id='style_image1'></div>
+                    <div className='style_text'>Acrylic</div>
                 </div>
-                <div id='style_box'>
-                    <div className='style_text'>style 2</div>
-                    <div className='style_image'></div>
+                <div className='style_box'>
+                    <div id='style_image2'></div>
+                    <div className='style_text'>Watercolor</div>
                 </div>
-                <div id='style_box'>
-                    <div className='style_text'>style 3</div>
-                    <div className='style_image'></div>
+                <div className='style_box'>
+                    <div id='style_image3'></div>
+                    <div className='style_text'>Oil</div>
                 </div>
-                <div id='style_box'>
-                    <div className='style_text'>style 4</div>
-                    <div className='style_image'></div>
+                <div className='style_box'>
+                    <div id='style_image4'></div>
+                    <div className='style_text'>Pastel</div>
                 </div>
-                <div id='style_box2'>
-                    <div className='style_text'>style 5</div>
-                    <div className='style_image'></div>
+                <div className='style_box'>
+                    <div id='style_image5'></div>
+                    <div className='style_text'>Pen and Ink</div>
+                </div>
+                <div className='style_box'>
+                    <div id='style_image6'></div>
+                    <div className='style_text'>Graphite</div>
+                </div>
+                <div className='style_box'>
+                    <div id='style_image7'></div>
+                    <div className='style_text'>Charcoal</div>
+                </div>
+                <div className='style_box'>
+                    <div id='style_image8'></div>
+                    <div className='style_text'>Colored pencil</div>
+                </div>
+                <div className='style_box'>
+                    <div id='style_image9'></div>
+                    <div className='style_text'>Digital art</div>
+                </div>
+                <div className='style_box'>
+                    <div id='style_image10'></div>
+                    <div className='style_text2'>Cinematic lighting</div>
                 </div>
             </div>
             <div className='padding_3'></div>
             <div className='input_container'>
                 <div className = 'explain_text'>Input Prompt</div>
-                <div className='input_box'></div>
+                <input type='text' className='input_box'></input>
             </div>
             <div className='padding_4'></div>
             <div className='generate_container' onClick={() => navigate('/main/result')}>
