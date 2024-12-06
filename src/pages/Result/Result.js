@@ -8,7 +8,7 @@ import axios from "axios";
 
 const Result = () => {
     const navigate = useNavigate();
-    const gptAPI = `Bearer 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`;
+    const gptAPI = `Bearer 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`;
     const [errorMessage, setErrorMessage] = useState("");
     const [generatedImage, setGeneratedImage] = useState("");
     const [state, setState] = useState("initial"); 
