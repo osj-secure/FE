@@ -16,7 +16,7 @@ const Result = () => {
                     back
                 </button>
                 <button className='refresh'>
-                    <LuRefreshCcw/>
+                    <LuRefreshCcw style={{width: '5vh', height: '5vh'}}/>
                 </button>
             </div>
             <div className='middle'>
