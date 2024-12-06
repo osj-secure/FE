@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FiRefreshCw } from "react-icons/fi";
 import { IoMdSkipBackward } from "react-icons/io";
@@ -8,7 +8,7 @@ import axios from "axios";
 
 const Result = () => {
     const navigate = useNavigate();
-    const gptAPI = `Bearer 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`;
+    const gptAPI = `Bearer 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`;
     const [errorMessage, setErrorMessage] = useState("");
     const [generatedImage, setGeneratedImage] = useState("");
     const [state, setState] = useState("initial"); 
@@ -84,7 +84,30 @@ const Result = () => {
             }
         }
     };
-      
+
+    const handleDownload = async() => {
+        try {
+            // generatedImage는 이미지의 URL이라고 가정
+            const response = await fetch(generatedImage);
+            const blob = await response.blob();
+        
+            // Blob을 object URL로 변환
+            const url = URL.createObjectURL(blob);
+        
+            // 다운로드를 트리거할 가상의 a 태그 생성
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = "generated_image.png"; // 원하는 파일명 지정
+            document.body.appendChild(link);
+            link.click();
+        
+            // 다운로드 후 cleanup
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+          } catch (error) {
+            console.error("이미지 다운로드 중 에러 발생:", error);
+          }
+        };
 
     return (
         <div>
@@ -146,7 +169,7 @@ const Result = () => {
                 )}
             </div>
         <div className='bottom'>
-            <button className='download'>
+            <button className='download' onClick={() => {handleDownload()}}>
                 <LuDownload className='download_icon'/>
                 Download
             </button>
