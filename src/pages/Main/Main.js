@@ -1,9 +1,9 @@
 import React from 'react';
 import './Main.css';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     return (
         <div className='Main_Container'>
             <div className='padding_1'></div>
@@ -21,10 +21,8 @@ const Main = () => {
                 <div className='input_box'></div>
             </div>
             <div className='padding_4'></div>
-            <div className='download_container'></div>
+            <div className='download_container' onClick={() => navigate('/main/result')}></div>
             <div className='padding_5'></div>
-            
-            {/* <button onClick={() => navigate('/main/result')}>to result</button> */}
         </div>
     );
 };
