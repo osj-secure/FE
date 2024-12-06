@@ -5,7 +5,7 @@ const app = express();
 const PORT = 8000;
 
 const cors = require("cors");
-app.use(cors({ origin: "http://localhost:3000" })); // React 포트
+app.use(cors({ origin: "https://bottle22.netlify.app:3000" })); // React 포트
 
 
 // Middleware 설정
