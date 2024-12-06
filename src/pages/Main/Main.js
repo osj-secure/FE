@@ -7,10 +7,43 @@ const Main = () => {
     const navigate = useNavigate();
     const [selectedColor, setSelectedColors] = useState([]);
     const [selectedStyle, setSelectedStyle] = useState(null);
-
+    const [theme, setTheme] = useState("");
+    const [colorPalette, setColorPalette] = useState([]);
+    const [excludedColors, setExcludedColors] = useState([]);
+    const [inputPrompt, setInputPrompt] = useState(`
+        연하지 않고 진한 색상이면 좋겠어. 고양이 세,
+        네마리가 줄지어서 앉아있으면 좋겠어. 근데 고양이가 두
+        마리는 생선을 먹고, 두 마리는 낮잠을 자면 좋겠어.
+    `);
+    
+    const colorOptions = [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "purple",
+        "black",
+        "grey",
+        "white",
+    ];
+    
+    const themes = [
+        "Acrylic painting",
+        "Watercolor painting",
+        "Oil painting",
+        "Pastel painting",
+        "Pen and Ink drawing",
+        "Graphite drawing",
+        "Charcoal drawing",
+        "Colored pencil drawing",
+        "Digital art",
+        "Cinematic lighting",
+    ];
+    
     useEffect(() => {
         const colorBoxes = document.querySelectorAll('.color_box');
-        const colors = ['#C00000', '#FF7049', '#FFF280', '#80FF89','#606DFF', '#8983FF', '#EA8EFF']
+        const colors = ['#C00000', '#FF7049', '#FFF280', '#80FF89','#606DFF', '#EA8EFF', '#000000', '#808080', '#FFFFFF']
 
         colorBoxes.forEach((box, index) => {
             box.style.backgroundColor = colors[index % colors.length];
@@ -39,6 +72,15 @@ const Main = () => {
                 return index;
             }
         });
+    }
+
+    const handleGeneratePrompt = async () => {
+        const hardCodingInput = `너의 역할은 간단한 그림의 묘사에 대한 text를 더 창의적으로 생성하는거야. prompt는 해당 내용이 포함되어아돼 "그림의 스타일 {style}, 그림 스타일에 대한{art style's description}설명, 배경의 테마, 배경의 디테일, 사물에 대한 표현, 등등. "다른 긴말 필요없이 결과만 알려줘. 그림의 스타일은 ${theme}고, 색깔은 ${colorPalette.join(
+            ", "
+        )}이 들어갔으면 좋겠고, ${excludedColors.join(
+            ", "
+        )}는 안들어갔으면 좋겠어. + ${inputPrompt}`;
+
     }
 
     return (
