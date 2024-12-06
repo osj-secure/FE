@@ -108,7 +108,7 @@ const Main = () => {
 
             // serverResponse 결과와 상관없이 prompt를 result.js로 전달
             // 여기서는 serverResponse를 사용하지 않고, generatedPromptText만 넘긴다고 가정
-            navigate('/main/result', { state: { generatedPromptText } });
+            navigate('/result', { state: { generatedPromptText } });
             
         } catch (error) {
             console.error("Error:", error);

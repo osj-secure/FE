@@ -13,7 +13,7 @@ const Result = () => {
     // main.js에서 navigate로 전달한 state를 받아옴
     const { generatedPromptText } = location.state || {};
 
-    const gptAPI = `Bearer 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`;
+    const gptAPI = `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`;
     const [errorMessage, setErrorMessage] = useState("");
     const [generatedImage, setGeneratedImage] = useState("");
     const [state, setState] = useState("initial"); 
@@ -42,6 +42,7 @@ const Result = () => {
 
     const handleGenerateImage = async () => {
         try {
+            console.log(generatedPromptText)
             // Prompt가 없는 경우 에러 처리
             if (!generatedPromptText) {
                 setErrorMessage("No prompt text provided.");
@@ -107,7 +108,7 @@ const Result = () => {
     return (
         <div>
             <div className='top'>
-                <button className='back' onClick={() => {navigate("/main")}}>
+                <button className='back' onClick={() => {navigate("/")}}>
                     <IoMdSkipBackward className = 'back_icon'/>
                     back
                 </button>
