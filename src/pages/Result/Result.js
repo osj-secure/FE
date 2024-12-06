@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom'; // useLocation 추가
 import { FiRefreshCw } from "react-icons/fi";
 import { IoMdSkipBackward } from "react-icons/io";
@@ -13,7 +13,7 @@ const Result = () => {
     // main.js에서 navigate로 전달한 state를 받아옴
     const { generatedPromptText } = location.state || {};
 
-    const gptAPI = `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`;
+    const gptAPI = `Bearer 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`;
     const [errorMessage, setErrorMessage] = useState("");
     const [generatedImage, setGeneratedImage] = useState("");
     const [state, setState] = useState("initial"); 
@@ -31,7 +31,9 @@ const Result = () => {
 
     useEffect(() => {
         // 컴포넌트 마운트 후 이미지 생성 요청
-        handleGenerateImage();
+        return () => {
+            handleGenerateImage();
+        };
         // console.log("test") // 기존 코드에서 test 로깅
     }, []);
 
@@ -81,29 +83,22 @@ const Result = () => {
         }
     };
 
-    const handleDownload = async() => {
-        try {
-            // generatedImage는 이미지의 URL이라고 가정
-            const response = await fetch(generatedImage);
-            const blob = await response.blob();
-        
-            // Blob을 object URL로 변환
-            const url = URL.createObjectURL(blob);
-        
-            // 다운로드를 트리거할 가상의 a 태그 생성
-            const link = document.createElement("a");
-            link.href = url;
-            link.download = "generated_image.png"; // 원하는 파일명 지정
-            document.body.appendChild(link);
-            link.click();
-        
-            // 다운로드 후 cleanup
-            document.body.removeChild(link);
-            URL.revokeObjectURL(url);
-        } catch (error) {
-            console.error("이미지 다운로드 중 에러 발생:", error);
-        }
-    };
+    const handleDownload = useCallback(() => {
+        fetch(generatedImage, { method: 'GET' }).then((res) => res.blob()).then((blob) => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'image.png';
+            document.body.appendChild(a);
+            a.click();
+            setTimeout((_) => {
+            window.URL.revokeObjectURL(url);
+            }, 1000);
+            a.remove();
+        }).catch((err) => {
+            console.error('err', err);
+        });
+        }, []);
 
     return (
         <div>
@@ -129,8 +124,8 @@ const Result = () => {
                             }`}
                             onClick={handleClick}
                             style={{
-                                width: "256px",
-                                height: "256px",
+                                width: "512px",
+                                height: "512px",
                                 overflow: "hidden",
                                 cursor: "pointer",
                             }}
@@ -148,17 +143,14 @@ const Result = () => {
                         </div>
                         {state === "initial" && (
                             <p style={{ marginTop: "10px", fontStyle: "italic" }}>
-                                Click to mask the image!
                             </p>
                         )}
                         {state === "masked" && (
                             <p style={{ marginTop: "10px", fontStyle: "italic" }}>
-                                Click again to spin the image!
                             </p>
                         )}
                         {state === "spinning" && (
                             <p style={{ marginTop: "10px", fontStyle: "italic" }}>
-                                Spinning… Wait for it to stop!
                             </p>
                         )}
                     </div>

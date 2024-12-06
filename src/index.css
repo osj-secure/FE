@@ -22,8 +22,8 @@ code {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 80px; /* Inner hole size */
-  height: 80px;
+  width: 160px; /* Inner hole size */
+  height: 160px;
   background-color: white; /* Simulate transparency for inner hole */
   transform: translate(-50%, -50%);
   border-radius: 50%; /* Inner circle */
